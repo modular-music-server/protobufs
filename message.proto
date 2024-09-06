@@ -2,6 +2,12 @@ syntax = "proto3";
 
 option go_package = "./message";
 
+enum MessageType {
+    HandshakeRequest = 0;
+    HandshakeResponse = 1;
+    RequestList = 2;
+}
+
 message HandshakeRequest {
     string protocol_version = 1;
 }
