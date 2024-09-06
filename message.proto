@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+option go_package = "./message";
+
+message HandshakeRequest {
+    string protocol_version = 1;
+}
+
+message HandshakeResponse {
+    bool accepted = 1;
+    string rejection_reason = 2;
+    string protocol_version = 3;
+}
+
+enum ListType {
+    PROVIDERS = 0;
+}
+
+message RequestList {
+    ListType type = 1;
+}
+
+message Provider {
+    string id = 1;
+    string name = 2;
+}
+
+message ListProviders {
+    repeated Provider providers = 1;
+}
