@@ -20,11 +20,20 @@ message RequestList {
     ListType type = 1;
 }
 
+message ProviderEntry {
+    string id = 1;
+    string name = 2;
+}
+
 message Provider {
     string id = 1;
     string name = 2;
 }
 
 message ListProviders {
-    repeated Provider providers = 1;
+    repeated ProviderEntry providers = 1;
+}
+
+message RequestProvider {
+    string id = 1;
 }
