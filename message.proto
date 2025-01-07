@@ -48,8 +48,15 @@ message RequestFile {
     string name = 2;
 }
 
-message FileStart {
+message FileInfo {
     FileType type = 1;
     string name = 2;
     int32 size = 3;
+}
+
+message FileChunk {
+    FileType type = 1;
+    string name = 2;
+    int32 size = 3;
+    bytes data = 4;
 }
