@@ -28,12 +28,28 @@ message ProviderEntry {
 message Provider {
     string id = 1;
     string name = 2;
+    string author = 3;
+    string description = 4;
 }
-
 message ListProviders {
     repeated ProviderEntry providers = 1;
 }
 
 message RequestProvider {
     string id = 1;
+}
+
+enum FileType {
+    PROVIDER_CLIENT = 0;
+}
+
+message RequestFile {
+    FileType type = 1;
+    string name = 2;
+}
+
+message FileStart {
+    FileType type = 1;
+    string name = 2;
+    int32 size = 3;
 }
