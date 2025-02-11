@@ -1,8 +1,19 @@
 {
     "name": "@modular-music-server/protobufs",
     "version": "0.0.1",
+    "description": "Generated JavaScript for handling modular-music-server protobufs.",
+    "homepage": "https://github.com/modular-music-server/protobufs",
+    "license": "GPL-3.0-only",
+    "files": [
+        "dist"
+    ],
     "main": "dist/message.js",
     "types": "dist/message.d.ts",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/modular-music-server/protobufs.git",
+        "directory": "node"
+    },
     "scripts": {
         "build": "tsc"
     },
@@ -12,8 +23,5 @@
     "devDependencies": {
         "@types/node": "^22.13.1",
         "typescript": "^5.7.3"
-    },
-    "files": [
-        "dist"
-    ]
+    }
 }
