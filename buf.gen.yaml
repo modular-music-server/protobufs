@@ -1,0 +1,10 @@
+version: v2
+plugins:
+  - remote: buf.build/protocolbuffers/go
+    out: go
+    opt: paths=source_relative
+  - remote: buf.build/community/stephenh-ts-proto:v2.3.0
+    out: node/src
+    opt: esModuleInterop=true
+inputs:
+  - directory: proto
